@@ -1,6 +1,11 @@
 import React from 'react';
+import { ITitleState } from '../Reducers/titleReducer';
 
-export const Title = (props) => <aside>
+interface ITitleProps extends ITitleState {
+    addTitleToCart: () => void;
+}
+
+export const Title = (props: ITitleProps) => <aside>
     <div className="wrapper">
         <h2>{props.title}</h2>
         <p>{props.description}</p>
